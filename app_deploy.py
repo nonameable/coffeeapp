@@ -250,6 +250,8 @@ def update_graphs(rows, derived_virtual_selected_rows):
         for column in ["ValorMilesFOBDol", "ValorMilesPesos", "VolumenToneladas"] if column in dff
     ]
 
+if __name__ == '__main__':
+    app.run_server(debug=True)
 
-if __name__ == "__main__":
-    app.run_server(port=8051, debug=True)
+server = app.server
+app.config.suppress_callback_exceptions = True
